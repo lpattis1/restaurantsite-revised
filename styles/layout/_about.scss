@@ -1,0 +1,100 @@
+#about {
+  margin-top: 7rem !important;
+
+  .about__banner {
+    background-image: url(/img/soulfood.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // opacity: 0;
+  }
+
+  .about-banner-txt {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+
+    .divider-top {
+      height: 1.5rem;
+      width: 25rem;
+      background: #f89b1c;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+
+    .banner-heading-text {
+      font-size: 5.5rem;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .divider-bottom {
+      height: 1.5rem;
+      width: 25rem;
+      background: #f89b1c;
+      margin: auto;
+      margin-top: 1rem;
+    }
+  }
+}
+
+#about {
+  .about-us__container {
+    margin-top: 5rem !important;
+    .about-us__text {
+      // opacity: 0;
+    }
+
+    .who-we-are {
+      font-size: 5rem;
+      color: #f89b1c;
+      margin-bottom: 3rem;
+
+      .emphasis {
+        text-decoration: underline;
+        text-decoration-color: #a6ce39;
+        text-underline-offset: 0.8rem;
+      }
+    }
+
+    .who-we-are__txt1 {
+      font-size: 1.6rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .who-we-are__txt2 {
+      font-size: 1.6rem;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 953px) {
+  .who-we-are {
+    font-size: 3rem;
+    color: #f89b1c;
+    margin-bottom: 3rem;
+    text-align: center !important;
+    margin: 0 auto !important;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+
+    .emphasis {
+      text-decoration: none !important;
+    }
+  }
+  .about-us__text {
+    text-align: center !important;
+  }
+}

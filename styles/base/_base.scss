@@ -1,0 +1,36 @@
+/* global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background: #FAFAFA;
+    height: 100%;
+      
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+input, textarea {
+    background-color: white;
+  }

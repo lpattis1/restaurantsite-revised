@@ -1,0 +1,21 @@
+.link-section {
+  text-decoration: underline;
+  text-decoration-color: #a6ce39;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.4rem;
+  transition: 0.2s ease-in-out;
+  color: #f89b1c !important;
+}
+
+.hovered-show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.hide-item {
+  display: none !important;
+}
+
+.pt-none {
+  padding-top: 0 !important;
+}

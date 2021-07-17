@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Yo' Mama's Online Ordering</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <!-- sub nav -->
+    <div class="top-bar d-flex align-items-center p-3 d-none d-sm-block">
+      <div
+        class="
+          top-bar__container
+          container
+          d-flex
+          justify-content-between
+          align-items-center
+          mt-3
+        "
+      >
+        <div
+          class="
+            top-bar__address-phone
+            d-flex
+            justify-content-between
+            align-items-center
+          "
+        >
+          <p class="address">
+            <i class="fas fa-map-marker-alt"></i> 2328 2ND AVE N, BIRMINGHAM, AL
+            35203
+          </p>
+          <p class="phone"><i class="fas fa-phone-alt"></i> 205-957-6545</p>
+        </div>
+        <div class="top-bar__hours d-none d-lg-block">
+          <p class="hours">
+            We're Open: Monday Through Friday 10:30am to 2:30pm
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light p-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">
+          <img class="logo__img img-fluid" src="/img/logo.png" alt=""
+        /></a>
+        <div class="divider d-none d-lg-block"></div>
+
+        <button
+          class="navbar-toggler navbar-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon hamburger-icon"></span>
+        </button>
+
+        <div
+          class="
+            collapse
+            navbar-collapse
+            justify-content-end
+            right-menu
+            text-center
+          "
+          id="navbarNav"
+        >
+          <ul class="navbar-nav justify-content-end top-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link link-section" href="#home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item cart-item">
+              <a class="nav-link cart-link d-flex align-items-center" href="#">
+                Cart
+                <img
+                  src="/img/shopping-cart.svg"
+                  alt=""
+                  class="cart img-fluid"
+                /><span
+                  data-value="0"
+                  class="count d-flex align-items-center justify-content-center"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <header id="home" class="page-section mt-4">
+      <div
+        class="
+          header__container
+          container
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+      >
+        <div class="header-box">
+          <div
+            class="
+              header-inner-content
+              container-fluid
+              d-flex
+              justify-content-between
+              align-items-center
+              row
+            "
+          >
+            <div class="header__text col col-xl-6 col-12">
+              <h1 class="intro-txt h1 display-2">
+                Home cooked meals made fresh to order.
+              </h1>
+              <p class="intro-description">
+                Sauces, entrees, sides and desserts are made from scratch!
+                Saturday brunch every 2nd & last Saturday each month from 9 to 1
+                PM. We do curbside and take-out.
+              </p>
+              <button class="order-now btn">Order now</button>
+            </div>
+            <div class="header__img col col-xl-6 col-12">
+              <img src="/img/food1.png" alt="" class="h-img img-fluid" />
+            </div>
+          </div>
+          <div
+            class="
+              header__jump-btn
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            <a href="#menu"><i class="fas fa-arrow-down"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+       <!-- about us -->
+       <section id="about" class="page-section mt-4">
+        <div class="about__banner">
+          <div class="about-banner-txt container d-flex justify-content-center align-items-center">
+            <div class="divider-top"></div>
+            <h2 class="banner-heading-text">About Us</h2>
+            <div class="divider-bottom"></div>
+          </div>
+        </div>
+  
+        <div class="about-us">
+         <div class="container">
+            <div class="about-us__container container row d-flex justify-content-center align-items-center">
+                <div class="about-us__text col col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                  <h2 class="who-we-are">
+                    <span class="emphasis">Who</span> are we?
+                  </h2>
+                  <p class="who-we-are__txt1">
+                    Yo' Mama's started as Jazzy Fish & Chicken down at the famous
+                    Seabreeze Jazz Festival in Destin and Panama City, Florida in
+                    2007. Each year it was the most popular vendor with a fast-moving
+                    and seemingly endless line serving an average of 600 plates a day.
+                
+                    <p class="who-we-are__txt2">
+                      Jazzy Fish & Chicken eventually became a restaurant reality
+                    starting in downtown Birmingham, Alabama as Yo' Mama's Restaurant,
+                    serving fresh meals made from scratch.
+                    </p>
+                  </p>
+                 
+                </div>
+                <div class="about-us__img col col-12 col-lg-6">
+                  <img class="worker-img img-fluid" src="/img/worker-alt.png" alt="">
+                </div>
+              </div>
+         </div>
+        </div>
+      </section>
+
+       <!-- menu -->
+    <section id="menu" class="page-section">
+        <div class="menu__banner">
+          <div class="menu-txt container d-flex justify-content-center align-items-center">
+            <div class="divider-top"></div>
+            <h2 class="menu-text">Menu</h2>
+            <div class="divider-bottom"></div>
+          </div>
+        </div>
+  
+        <div class="menu-categories">
+         <div class="categories-container container d-flex align-items-center justify-content-between">
+          <div class="selections-container">
+            <h2 class="selections">Our Selections</h2>
+          </div>
+          <div class="categories d-flex">
+            <div class="all">
+              <button class="all-btn">All</button>
+            </div>
+            <div data-category="item" class="category-one category-contain">
+              <button data-category="seafood" class="category">Seafood</button>
+            <div class="hovered-category">
+              <p data-hovered="shrimp" class="hovered-item">Shrimp</p>
+              <p data-hovered="fish" class="hovered-item">Fish</p>
+            </div>
+            </div>
+            <div class="category-two category-contain">
+              <button data-category="meat" class="category">Meat</button>
+            <div class="hovered-category">
+              <p data-hovered="chicken" class="hovered-item">Chicken</p>
+              <p data-hovered="beef" class="hovered-item">Beef</p>
+            </div>
+            </div>
+           <div class="category-three category-contain">
+            <button data-category="sides" class="category">Sides</button>
+            <div class="hovered-category">
+              <p data-hovered="fries" class="hovered-item">Fries</p>
+              <p data-hovered="grits" class="hovered-item">Grits</p>
+              <p data-hovered="slaw" class="hovered-item">Cole Slaw</p>
+              <p data-hovered="beans" class="hovered-item">Beans</p>
+              <p data-hovered="veggies" class="hovered-item">Veggies</p>
+              <p data-hovered="rice" class="hovered-item">Rice</p>
+            </div>
+           </div>
+            <div class="category-four category-contain">
+              <button data-category="desserts" class="category">Desserts</button>
+            <div class="hovered-category">
+              <p data-hovered="pie" class="hovered-item">Pie</p>
+              <p data-hovered="cake" class="hovered-item">Cake</p>
+              <p data-hovered="icecream" class="hovered-item">Ice Cream</p>
+              <p data-hovered="pudding" class="hovered-item">Pudding</p>
+            </div>
+            </div>
+          </div>
+         </div>
+        </div>
+  
+        <div class="menu-items">
+  
+          <section class="section-one">
+              <div class="container">
+                  <div class="row g-5 menu__container">
+                      <!-- seafood -->
+                      <div class="seafood__title col col-12 d-flex justify-content-center align-items-center menu-title-col">
+                          <h3 class="food-title">Seafood</h3>
+                      </div>
+                    <div class="col col-12 col-lg-4 seafood-wrapper menu-col">
+                        <div class=" item  seafood fish">
+                            <img src="/img/fishandchips.png" alt="" class="food-pic ">
+                            <h3 data-price="13.52" class="item-name">Fried Fish Plate</h3>
+                            <p class="item-description">Crispy on the outside, tender and delicious on the inside. Fresh tilapia fillets golden fried or grilled. Served with fries, slaw and homemade tartar sauce.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                    </div>
+            
+                      <div class="col col-12 col-lg-4 seafood-wrapper menu-col">
+                        <div class=" item  seafood fish">
+                            <img src="/img/fishtaco.png" alt="" class="food-pic ">
+                            <h3 data-price="11.99" class="item-name">Fish Tacos</h3>
+                            <p class="item-description">Tilapia, grilled or fried, topped with POE Sauce, salsa fresca and slaw. Served on warm tortillas, with a side of black beans and rice. Flour or corn (GF) tortillas.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+            
+                    <div class="seafood-wrapper col col-12 col-lg-4 menu-col">
+                        <div class=" item  seafood shrimp">
+                            <img src="/img/shrimptaco.png" alt="" class="food-pic ">
+                            <h3 data-price="8.12" class="item-name">Shrimp Tacos</h3>
+                            <p class="item-description">Shrimp, grilled or fried, topped with POE Sauce, salsa fresca and slaw. Served on warm tortillas, with a side of black beans and rice. Flour or corn (GF) tortillas.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                    </div>
+
+                      <div class="seafood-wrapper col col-12 col-lg-4 menu-col">
+                        <div class=" item seafood shrimp">
+                            <img src="/img/shrimpandgrits.png" alt="" class="food-pic ">
+                            <h3 data-price="9" class="item-name">Shrimp & Grits</h3>
+                            <p class="item-description">Perfectly cooked grits mixed with white cheddar, asiago, and cream cheese. Topped with shrimp, spicy sausage, red & green bell peppers, & onions.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+            
+                     <div class="seafood-wrapper col col-12 col-lg-4 menu-col">
+                        <div class=" item seafood shrimp">
+                            <img src="/img/shrimppplate.png" alt="" class="food-pic ">
+                            <h3 data-price="10" class="item-name">Shrimp Plate</h3>
+                            <p class="item-description">Juicy shrimp grilled or fried to perfection. Served with fresh cut fries, slaw and homemade tartar sauce.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                     </div>
+            
+                     <div class="seafood-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item seafood shrimp">
+                            <img src="/img/shrimppasta.png" alt="" class="food-pic ">
+                            <h3 data-price="11" class="item-name">Shrimp Pasta</h3>
+                            <p class="item-description">Delicious grilled shrimp marinated in our homemade lemon sauce. Topped with fresh alfredo sauce and pasta.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                     </div>
+
+                       <!-- meat -->
+                       <div class="meat__title col col-12 d-flex justify-content-center align-items-center menu-title-col">
+                        <h3 class="food-title">Meat</h3>
+                      </div>
+
+                      <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat chicken">
+                            <img src="/img/hotwings.png" alt="" class="food-pic ">
+                            <h3 data-price="7" class="item-name">Hot Wings Plate</h3>
+                            <p class="item-description">Crispy fried chicken wings tossed in a savory, spicy, and sweet sauce. Served with fresh-cut french fries, bread, and ranch sauce.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+              
+                     <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat chicken">
+                            <img src="/img/chickenandwaffles.png" alt="" class="food-pic">
+                            <h3 data-price="13" class="item-name">Chicken & Waffles</h3>
+                            <p class="item-description">Belgian waffles with deep pockets to fill with our homemade syrup, fruit toppings (blueberries or strawberries +1.50) and topped with 6 golden fried chicken wings.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                     </div>
+              
+                     <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat chicken">
+                            <img src="/img/friedchicken.png" alt="" class="food-pic ">
+                            <h3 data-price="8" class="item-name">Chicken Plate</h3>
+                            <p class="item-description">Crispy on the outside, tender and delicious on the inside. Chicken wings flavorfully golden fried and served with fries, slaw and bread.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                     </div>
+
+                      <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat chicken">
+                            <img src="/img/chickensteak.png" alt="" class="food-pic ">
+                            <h3 data-price="10" class="item-name">Chicken Steak</h3>
+                            <p class="item-description">A true Southern comfort. The chicken steak plate comes with our homemade gravy and breaded chicken.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+              
+                      <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat chicken">
+                            <img src="/img/shrimppplate.png" alt="" class="food-pic ">
+                            <h3 data-price="7" class="item-name">Chicken Nuggets</h3>
+                            <p class="item-description">A 6 or 9 piece serving of our chicken nuggets. Comes with our famous, homebrewed dipping sauce.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+              
+                      <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat chicken">
+                            <img src="/img/shrimppasta.png" alt="" class="food-pic ">
+                            <h3 data-price="14" class="item-name">Chicken Shawarma</h3>
+                            <p class="item-description">Chicken cut into thin slices, stacked in a cone-like shape, and roasted on our slowly-turning vertical rotisserie</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                     <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat beef">
+                            <img src="/img/bbqburger.png" alt="" class="food-pic ">
+                            <h3 data-price="14" class="item-name">BBQ Cheeseburger Plate</h3>
+                            <p class="item-description">Perfectly seasoned beef, covered with cheddar cheese, caramelized onions and our homemade BBQ sauce. Served with fries. Gluten-free bun add 1.50.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                     </div>
+              
+                      <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat beef">
+                            <img src="/img/steakdinner.png" alt="" class="food-pic ">
+                            <h3 data-price="17" class="item-name">Steak Plate</h3>
+                            <p class="item-description">A classic ribeye with any 2 sides of your choice. We use our homemade sauce and smoke our steaks.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+              
+                     <div class="meat-wrapper col-12 col-lg-4 menu-col">
+                        <div class=" item meat beef">
+                            <img src="/img/cheeseburger.png" alt="" class="food-pic ">
+                            <h3 data-price="11" class="item-name">Cheeseburger Plate</h3>
+                            <p class="item-description">Seasoned beef with any choice of toppings. Served with fries and your choice of an extra side. Gluten-free bun.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                     </div>
+
+                     <!-- sides -->
+                     <div class="sides__title col col-12 d-flex justify-content-center align-items-center menu-title-col">
+                        <h3 class="food-title">Sides</h3>
+                      </div>
+
+                      <div class="sides-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item sides fries">
+                            <img src="/img/frenchfries.png" alt="" class="food-pic">
+                            <h3 data-price="7" class="item-name">French Fries</h3>
+                            <p class="item-description">Choose from our small, medium, or large steak cut fries that comes seasoned with an amazing blend of spices. Comes with your choice of condiment.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="sides-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item sides grits">
+                            <img src="/img/grits.png" alt="" class="food-pic">
+                            <h3 data-price="5" class="item-name">Cheese Grits</h3>
+                            <p class="item-description">Our famous grits blended with a medley of cheeses. Gluten-free is available for an added 1.50.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="sides-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item sides veggies">
+                            <img src="/img/brocolli.png" alt="" class="food-pic">
+                            <h3 data-price="4" class="item-name">Brocolli</h3>
+                            <p class="item-description">A healthy, steamed plate of freshly cut brocolli. Comes with an optional dipping sauce and packet of salt.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="sides-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item sides slaw">
+                            <img src="/img/coleslaw.png" alt="" class="food-pic">
+                            <h3 data-price="5" class="item-name">Cole Slaw</h3>
+                            <p class="item-description">Slaw salad served with finely shredded raw cabbage, mayonaise, and your choice of a salad dressing</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="sides-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item sides rice">
+                            <img src="/img/spanishrice.png" alt="" class="food-pic">
+                            <h3 data-price="6" class="item-name">Spanish Rice</h3>
+                            <p class="item-description">Rice stirred with onions and garlic, simmered in chicken broth with freshly added tomatoes and peas.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="sides-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item sides beans">
+                            <img src="/img/blackbeans.png" alt="" class="food-pic">
+                            <h3 data-price="6" class="item-name">Black Beans</h3>
+                            <p class="item-description">Mama’s delicious black beans come with unique spices that accentuate the flavor and deliver a taste you won’t forget.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <!-- desserts -->
+                      <div class="desserts__title  col col-12 d-flex justify-content-center align-items-center menu-title-col">
+                        <h3 class="food-title">Desserts</h3>
+                      </div>
+
+                      <div class="desserts-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item desserts pie">
+                            <img src="/img/keylimepie.png" alt="" class="food-pic">
+                            <h3 data-price="10" class="item-name">Key Lime Pie</h3>
+                            <p class="item-description">Made with With its outstanding macadamia nut crust, creamy thick lime filling, and sweet whipped cream on top.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="desserts-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item desserts pie">
+                            <img src="/img/peachpie.png" alt="" class="food-pic">
+                            <h3 data-price="9" class="item-name">Peach Pie</h3>
+                            <p class="item-description">Made with freshly peeled peaches and a crusty pie base that tastes like heaven. Gluten-free crust is optional.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="desserts-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item desserts pie">
+                            <img src="/img/lemonpie.png" alt="" class="food-pic">
+                            <h3 data-price="9" class="item-name">Lemon Pie</h3>
+                            <p class="item-description">Unbelievably creamy lemon pie is just like key lime pie with a lemon twist and toasty almond graham cracker crust. </p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="desserts-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item desserts icecream">
+                            <img src="/img/pecanicecream.png" alt="" class="food-pic">
+                            <h3 data-price="8" class="item-name">Pecan Ice Cream</h3>
+                            <p class="item-description">Smooth and thick vanilla ice cream with a slight buttery flavor,  blended with fresh pecans.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="desserts-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item desserts cake">
+                            <img src="/img/pineapplecake.png" alt="" class="food-pic">
+                            <h3 data-price="12" class="item-name">Pineapple Cake</h3>
+                            <p class="item-description">A moist pineapple cake base with freshly whipped frosting and decorative fruit toppings.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+
+                      <div class="desserts-wrapper col-12 col-lg-4 menu-col">
+                        <div class="item desserts pudding">
+                            <img src="/img/bananapudding.png" alt="" class="food-pic">
+                            <h3 data-price="7" class="item-name">Banana Pudding</h3>
+                            <p class="item-description">Consists of layers of vanilla custard with vanilla waifers and sliced bananas topped with whipped cream or meringue.</p>
+                            <button class="order-btn">Add to Cart</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+  
+        </div>
+      </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      const scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/forms.js"></script>
+  
+  </body>
+</html>
