@@ -1,3 +1,33 @@
+// Scroll Menu - show active section
+const scrollingLinkAnimation = function (e) {
+  const sections = document.querySelectorAll(".page-section");
+  const links = document.querySelectorAll(".main-link");
+
+  const observer = new IntersectionObserver(function (sections, options) {
+    sections.forEach((section) => {
+      if (!section.isIntersecting) {
+        return;
+      }
+
+      links.forEach((link) => {
+        const linkName = link.classList[2];
+
+        if (section.target.id === linkName) {
+          link.classList.add("link-section");
+        } else {
+          link.classList.remove("link-section");
+        }
+      });
+    });
+  });
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+};
+
+scrollingLinkAnimation();
+
 // Menu Functions
 
 // Display and hide hovered menu categories:

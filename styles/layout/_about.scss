@@ -8,6 +8,7 @@
     background-attachment: fixed;
     background-size: cover;
     height: 50rem;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,9 +52,6 @@
 #about {
   .about-us__container {
     margin-top: 5rem !important;
-    .about-us__text {
-      // opacity: 0;
-    }
 
     .who-we-are {
       font-size: 5rem;

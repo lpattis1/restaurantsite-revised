@@ -1,36 +1,47 @@
 /* global styles */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    height: 100%;
+  font-size: 62.5%;
+  height: 100%;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    background: #FAFAFA;
-    height: 100%;
-      
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  background: #fafafa;
+  height: 100%;
+  width: 100% !important;
+}
+
+body,
+.smooth-container {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
 
-input, textarea {
-    background-color: white;
-  }
+input,
+textarea {
+  background-color: white;
+}
