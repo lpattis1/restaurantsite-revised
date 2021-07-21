@@ -1,5 +1,7 @@
 #about {
   margin-top: 7rem !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.5s;
 
   .about__banner {
     background-image: url(/img/soulfood.jpg);
@@ -13,7 +15,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // opacity: 0;
   }
 
   .about-banner-txt {
@@ -50,6 +51,7 @@
 }
 
 #about {
+  
   .about-us__container {
     margin-top: 5rem !important;
 

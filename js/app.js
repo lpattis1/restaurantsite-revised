@@ -1,6 +1,8 @@
+
 // Scroll Menu - show active section
-const scrollingLinkAnimation = function (e) {
+const scrollingLinkAnimation = function () {
   const sections = document.querySelectorAll(".page-section");
+  const sectionChildren = document.querySelectorAll(".page-section-container");
   const links = document.querySelectorAll(".main-link");
 
   const observer = new IntersectionObserver(function (sections, options) {
@@ -18,6 +20,10 @@ const scrollingLinkAnimation = function (e) {
           link.classList.remove("link-section");
         }
       });
+
+      if (section.target) {
+        section.target.classList.add("show-page-section");
+      }
     });
   });
 
@@ -27,8 +33,6 @@ const scrollingLinkAnimation = function (e) {
 };
 
 scrollingLinkAnimation();
-
-// Menu Functions
 
 // Display and hide hovered menu categories:
 const showHoveredMenuCategories = function (e) {

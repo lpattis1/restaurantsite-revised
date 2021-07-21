@@ -1,0 +1,24 @@
+#footer {
+  background: #a6ce39;
+  padding: 1.5rem;
+  margin-top: 4rem;
+
+  .copyright {
+    font-size: 1.4rem;
+    color: white;
+  }
+
+  .footer-socials {
+    .fab {
+      font-size: 1.6rem;
+      margin-right: 1.2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .fab:hover {
+      color: #f89b1c;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+#contact {
+  margin-top: 7rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out 0.3s;
+
+
+
+  .contact__banner {
+    background-image: url(/img/souldfood3.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // opacity: 0;
+    margin-bottom: 5rem;
+  }
+
+  .contact-txt {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+
+    .divider-top {
+      height: 1.5rem;
+      width: 26rem;
+      background: #f89b1c;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+
+    .contact-text {
+      font-size: 5.5rem;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .divider-bottom {
+      height: 1.5rem;
+      width: 26rem;
+      background: #f89b1c;
+      margin: auto;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.contact-title {
+  font-size: 4rem;
+  color: #f89b1c;
+  text-decoration: underline;
+  text-decoration-color: #a6ce39;
+  text-underline-offset: 0.8rem;
+  margin-bottom: 5rem;
+}
+
+.thank-you-section {
+  .thank-you-title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #a6ce39;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .thank-you-message {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .thank-you-socials {
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+
+    .social {
+      font-size: 3rem;
+      margin-right: 2rem;
+      background: #f89b1c;
+      padding: 0.8rem 1.8rem;
+      border-radius: 0.5rem;
+      color: white;
+    }
+
+    .social:hover {
+      transition: 0.3s ease-in-out;
+      background: #e7931c;
+    }
+  }
+}
+
+.contact-input {
+  padding: 1.5rem;
+
+  font-size: 1.6rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 10%);
+}
+
+.contact-label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+  margin-bottom: 1rem;
+}
+
+.contact-col {
+  .form-message {
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: red;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.warnings {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  .warning-text {
+    font-size: 1.3rem;
+    color: red;
+    display: none;
+  }
+}
+
+.contact-btn {
+  .contact-submit {
+    padding: 2rem 6rem;
+    border: none;
+    background: #a6ce39;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

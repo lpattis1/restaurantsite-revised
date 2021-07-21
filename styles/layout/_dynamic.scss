@@ -7,6 +7,16 @@
   color: #f89b1c !important;
 }
 
+.count-active {
+  visibility: visible !important;
+}
+
+.show-page-section {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.3s ease-in-out 0.5s;
+}
+
 .hovered-show {
   visibility: visible !important;
   opacity: 1 !important;
@@ -18,4 +28,30 @@
 
 .pt-none {
   padding-top: 0 !important;
+}
+
+input.valid {
+  border: 0.3rem solid #38bc38 !important;
+}
+
+input.invalid {
+  border: 0.3rem solid red !important;
+}
+
+input.invalid + .form-message {
+  opacity: 1;
+  visibility: visible;
+}
+
+input.valid + .form-message {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-warning {
+  display: block !important;
+}
+
+.thank-you-show {
+  display: block !important;
 }

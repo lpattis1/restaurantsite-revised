@@ -27,9 +27,86 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
+
+    <!-- cart items modal -->
+    <div class="cart-modal-bg  d-none">
+      <div class="cart-modal ">
+        <div class="cart-sum  d-flex align-items-center justify-content-center">
+          <h2 class="cart-title ">Order summary</h2>
+        </div>
+        <div class="container">
+          <div class="cart-modal-close"><i class="fas fa-times-circle"></i></div>
+        <div class="checkout-page">
+
+          <div class="summary  d-flex flex-column justify-content-center align-items-center text-center">
+            <div class="bag">
+              <h3 class="bag-title">Bag</h3>
+              <div class="container bag-container">
+                <ul class="orders row orders-row g-5">
+                  <!-- <li class="col col-lg-4 col-12">hey</li>
+                  <li class="col col-lg-4 col-12">hey</li>
+                  <li class="col col-lg-4 col-12">hey</li> -->
+                </ul>
+              </div>
+              <div class="bag-divider"></div>
+            </div>
+            <div class="checkout-price">
+              <h3 class="checkout-title">Total</h3>
+              <p class="total-price">Total price: $<span class="total-number">0</span></p>
+              <p class="amount-alert">Please add at least one item to your cart.</p>
+              <button class="to-details-btn">Checkout</button>
+            </div>
+          </div>
+
+          <div class="enter-details-page">
+            <h3 class="details-title text-center">Enter your details</h3>
+            <div class="details-form d-flex flex-column justify-content-center align-items-center">
+              <div class="name-area">
+                <label for="details-name">Name</label>
+              <input type="text" class="details-name details-input form-control form-control-lg" name="fullname" placeholder="Your Name">
+              <p class="form-message">Please enter a valid name (first name and last).</p>
+              </div>
+
+             <div class="email-area">
+              <label for="details-email">Email Address</label>
+              <input type="email" class="details-email details-input form-control form-control-lg" name="email" placeholder="Your Email">
+              <p class="form-message">Email must be valid, e.g. me@mydomain.com.</p>
+             </div>
+
+              <div class="payment-area ">
+                <label for="details-payment">Payment</label>
+                <input type="text" class="details-payment-card details-input form-control form-control-lg" name="card" placeholder="Card Number">
+                <p class="form-message">Card number is invalid (must be 16 digits).</p>
+                <input type="text" class="details-payment-cvc details-input form-control form-control-lg" name="cvc" placeholder="CVC">
+                <p class="form-message">Please enter a valid cvc code (3 digits).</p>
+                <input type="text" class="details-payment-zip details-input form-control form-control-lg" name="zipcode" placeholder="Zipcode">
+                <p class="form-message">Please enter a valid zipcode (5 digits).</p>
+              </div>
+
+              <div class="warnings">
+                <p class="warning-text">Please fill out the form. Do not leave any invalid or empty inputs.</p>
+              </div>
+
+              <div class="btn-area d-flex justify-content-center align-items-center">
+                <button class="go-back btn">Go Back</button>
+              <button class="checkout-btn btn">Complete Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-complete-page d-none d-flex flex-column align-items-center justify-content-center">
+          <h3 class="complete-title">Order Complete</h3>
+       
+          <p class="complete-message">Thank you for your order. We have received it and will start preparing it right away 😎 please check your email for a receipt.</p>
+        </div>
+        </div>
+      </div>
+    </div>
     <!-- sub nav -->
     <div class="top-bar d-flex align-items-center p-3 d-none d-sm-block">
       <div
@@ -67,7 +144,7 @@
     <!-- navbar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light p-4">
       <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#home">
           <img class="logo__img img-fluid" src="/img/logo.png" alt=""
         /></a>
         <div class="divider d-none d-lg-block"></div>
@@ -190,7 +267,7 @@
         </div>
   
         <div class="about-us">
-         <div class="container">
+         <div class="container page-section-container">
             <div class="about-us__container container row d-flex justify-content-center align-items-center">
                 <div class="about-us__text col col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
                   <h2 class="who-we-are">
@@ -228,7 +305,7 @@
           </div>
         </div>
   
-        <div class="menu-categories">
+        <div class="menu-categories page-section-container">
          <div class="categories-container container d-flex align-items-center justify-content-between">
           <div class="selections-container">
             <h2 class="selections">Our Selections</h2>
@@ -275,7 +352,7 @@
          </div>
         </div>
   
-        <div class="menu-items">
+        <div class="menu-items page-section-container">
   
           <section class="section-one">
               <div class="container">
@@ -547,8 +624,110 @@
   
         </div>
       </section>
+ 
+      <!-- contact -->
+      <section id="contact" class="page-section">
+        <div class="contact__banner">
+          <div class="contact-txt container d-flex justify-content-center align-items-center">
+            <div class="divider-top"></div>
+            <h2 class="contact-text">Contact</h2>
+            <div class="divider-bottom"></div>
+          </div>
+        </div>
 
-    <script src="zenscroll-min.js"></script>
+        <div class="contact__section">
+          <div class="container page-section-container">
+
+            <!-- thank you message (hidden until submission) -->
+            <div class="thank-you-section d-flex flex-column justify-content-center align-items-center d-none">
+              <h2 class="thank-you-title">Thank you for your message <span class="user-name"> </span>! 😁</h2>
+              <p class="thank-you-message">We will get in touch with you shortly. Until then, feel free to check out our menu or our social media platforms!</p>
+              <ul class="thank-you-socials d-flex align-items-center justify-content-center">
+                <li><a href="http://www.facebook.com" class="social"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://www.twitter.com" class="social"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://www.instagram.com" class="social"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+             </div>
+
+             <!-- contact form -->
+             <div class="contact__form">
+               <div class="container">
+                <h2 class="contact-title d-flex justify-content-center align-items-center">Connect With Us!</h2>
+                 <div class="row contact-row">
+                   <!-- name -->
+                   <div class="col col-12 contact-col">
+                    <div class="name-area d-flex flex-column justify-content-center align-items-start">
+                      <label class="name-label contact-label" for="name">Your Full Name</label>
+                      <input class="contact-name contact-input form-control form-control-lg" type="text" name="fullname" placeholder="John Doe">
+                      <p class="form-message">Please enter a valid name (first name and last).</p>
+                    </div>
+                   </div>
+
+                   <!-- email -->
+                   <div class="col col-12 contact-col">
+                    <div class="email-area d-flex flex-column justify-content-center align-items-start">
+                      <label class="email-label contact-label" for="email">Email Address</label>
+                      <input class="contact-email contact-input form-control form-control-lg" type="email" name="email" placeholder="Johndoe@gmail.com">
+                      <p class="form-message">Email must be valid, e.g. me@mydomain.com.</p>
+                    </div>
+                   </div>
+
+                   <!-- phone -->
+                   <div class="col col-12 contact-col">
+                    <div class="phone-area d-flex flex-column justify-content-center align-items-start">
+                      <label class="phone-label contact-label" for="phone">Phone Number</label>
+                      <input class="contact-phone contact-input form-control form-control-lg" type="text" name="phone" placeholder="(555)-555-5555">
+                      <p class="form-message">Phone number must be a valid US telephone number (10 digits).</p>
+                    </div>
+                   </div>
+
+                   <!-- message -->
+                   <div class="col col-12 contact-col">
+                    <div class="message-area d-flex flex-column justify-content-center align-items-start">
+                      <label class="message-label contact-label" for="message">Your Message</label>
+                      <textarea name="message" class="contact-message contact-input form-control form-control-lg" cols="30" rows="10" placeholder="My Message..."></textarea>
+                    </div>
+                   </div>
+
+                   <!-- warnings -->
+                   <div class="col col-12 contact-col">
+                    <div class="warnings d-flex flex-column justify-content-center align-items-center">
+                      <p class="warning-text">Please fill out the form. Do not leave any invalid or empty inputs.</p>
+                    </div>
+                   </div>
+
+                    <!-- contact btn -->
+                    <div class="col col-12 contact-col">
+                      <div class="contact-btn d-flex flex-column justify-content-center align-items-center">
+                        <button class="contact-submit">Submit</button>
+                      </div>
+                    </div>
+                 </div>
+               </div>
+             </div>
+
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="copyright">
+            ©2021 Denidine Group LLC - Yo Mama's Restaurant & Catering.
+          </div>
+          <div class="footer-socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-yelp"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest"></i>
+          </div>
+        </div>
+      </footer>
+
+ 
+ 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -557,6 +736,6 @@
     <script src="/js/app.js"></script>
     <script src="/js/cart.js"></script>
     <script src="/js/forms.js"></script>
-  
+    <script src="zenscroll-min.js"></script>
   </body>
 </html>

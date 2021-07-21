@@ -16,11 +16,11 @@ body {
   background: #fafafa;
   height: 100%;
   width: 100% !important;
+  position: relative;
 }
 
-body,
-.smooth-container {
-  scroll-behavior: smooth;
+p {
+  margin-bottom: 0 !important;
 }
 
 html,
@@ -45,8 +45,15 @@ textarea {
   background-color: white;
 }
 
+body,
+.smooth-container {
+  scroll-behavior: smooth;
+}
+
 #about {
   margin-top: 7rem !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.5s;
 }
 #about .about__banner {
   background-image: url(/img/soulfood.jpg);
@@ -132,6 +139,141 @@ textarea {
     text-align: center !important;
   }
 }
+#contact {
+  margin-top: 7rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out 0.3s;
+}
+#contact .contact__banner {
+  background-image: url(/img/souldfood3.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+#contact .contact-txt {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+#contact .contact-txt .divider-top {
+  height: 1.5rem;
+  width: 26rem;
+  background: #f89b1c;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+#contact .contact-txt .contact-text {
+  font-size: 5.5rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+#contact .contact-txt .divider-bottom {
+  height: 1.5rem;
+  width: 26rem;
+  background: #f89b1c;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 4rem;
+  color: #f89b1c;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #a6ce39;
+          text-decoration-color: #a6ce39;
+  text-underline-offset: 0.8rem;
+  margin-bottom: 5rem;
+}
+
+.thank-you-section .thank-you-title {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #a6ce39;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.thank-you-section .thank-you-message {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.thank-you-section .thank-you-socials {
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+.thank-you-section .thank-you-socials .social {
+  font-size: 3rem;
+  margin-right: 2rem;
+  background: #f89b1c;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+.thank-you-section .thank-you-socials .social:hover {
+  transition: 0.3s ease-in-out;
+  background: #e7931c;
+}
+
+.contact-input {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact-label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+  margin-bottom: 1rem;
+}
+
+.contact-col .form-message {
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: red;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.warnings {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.warnings .warning-text {
+  font-size: 1.3rem;
+  color: red;
+  display: none;
+}
+
+.contact-btn .contact-submit {
+  padding: 2rem 6rem;
+  border: none;
+  background: #a6ce39;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .link-section {
   text-decoration: underline;
   -webkit-text-decoration-color: #a6ce39;
@@ -140,6 +282,16 @@ textarea {
   text-underline-offset: 0.4rem;
   transition: 0.2s ease-in-out;
   color: #f89b1c !important;
+}
+
+.count-active {
+  visibility: visible !important;
+}
+
+.show-page-section {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.3s ease-in-out 0.5s;
 }
 
 .hovered-show {
@@ -153,6 +305,52 @@ textarea {
 
 .pt-none {
   padding-top: 0 !important;
+}
+
+input.valid {
+  border: 0.3rem solid #38bc38 !important;
+}
+
+input.invalid {
+  border: 0.3rem solid red !important;
+}
+
+input.invalid + .form-message {
+  opacity: 1;
+  visibility: visible;
+}
+
+input.valid + .form-message {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-warning {
+  display: block !important;
+}
+
+.thank-you-show {
+  display: block !important;
+}
+
+#footer {
+  background: #a6ce39;
+  padding: 1.5rem;
+  margin-top: 4rem;
+}
+#footer .copyright {
+  font-size: 1.4rem;
+  color: white;
+}
+#footer .footer-socials .fab {
+  font-size: 1.6rem;
+  margin-right: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+#footer .footer-socials .fab:hover {
+  color: #f89b1c;
+  transition: 0.3s ease-in-out;
 }
 
 #home {
@@ -283,6 +481,8 @@ textarea {
 }
 #menu {
   margin-top: 7rem !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.3s;
 }
 #menu .menu__banner {
   background-image: url(/img/2.jpg);
@@ -551,6 +751,277 @@ textarea {
     border-radius: 0.5rem !important;
   }
 }
+.cart-modal-bg {
+  background: rgba(0, 0, 0, 0.171);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.cart-modal-bg .cart-modal {
+  background: #f8f8f8;
+  position: relative;
+  transition: 0.3s ease-in;
+  max-width: 100rem;
+  width: 100%;
+  height: 80%;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+.cart-modal-bg .cart-modal .cart-sum {
+  background: #a6ce39;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.cart-modal-bg .cart-modal .cart-sum .cart-title {
+  color: white;
+  font-size: 3rem;
+}
+.cart-modal-bg .cart-modal .cart-modal-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  z-index: 3000;
+  cursor: pointer;
+}
+.cart-modal-bg .cart-modal .cart-modal-close .fa-times-circle {
+  font-size: 3rem;
+  color: black;
+}
+.cart-modal-bg .cart-modal .summary {
+  transition: 0.3s ease-in-out;
+}
+
+.bag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bag .bag-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+.bag .orders {
+  margin-bottom: 3rem;
+}
+.bag .order-item-col {
+  margin-top: 4rem !important;
+}
+.bag .orders li {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 600;
+}
+.bag .orders li img {
+  height: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+.bag .orders .item-price {
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bag .orders .remove-btn {
+  padding: 1.5rem 0.5rem;
+  width: 9rem;
+  background: #f89b1c;
+  border: none;
+  margin: auto;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 600;
+}
+.bag .orders .remove-btn:hover {
+  background: #e48f19;
+  transition: 0.3s ease-in-out;
+}
+.bag .bag-divider {
+  height: 0.2rem;
+  width: 100rem !important;
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.checkout-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.checkout-price .to-details-btn {
+  margin-bottom: 3rem;
+  padding: 2rem 4rem;
+  border: none;
+  background: #a6ce39;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 600;
+}
+.checkout-price .amount-alert {
+  color: red;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+.checkout-price .checkout-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.checkout-price .total-price {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.checkout-price .total-price .total-number {
+  font-weight: 600;
+  color: #f89b1c;
+}
+.checkout-price .total-divider {
+  height: 0.2rem;
+  width: 100rem !important;
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.warnings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warnings .warning-text {
+  font-size: 1.3rem;
+  color: red;
+  display: none;
+}
+
+.enter-details-page {
+  margin-top: 3rem;
+  transition: 0.3s ease-in-out;
+  transform: translateX(200%);
+}
+.enter-details-page .form-message {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: red;
+  display: none;
+}
+.enter-details-page .details-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.enter-details-page .details-form .name-area {
+  margin-bottom: 2rem;
+}
+.enter-details-page .details-form .name-area label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+}
+.enter-details-page .details-form .name-area .details-name {
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.enter-details-page .details-form input {
+  width: 40rem;
+}
+.enter-details-page .details-form .email-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.enter-details-page .details-form .email-area label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+}
+.enter-details-page .details-form .email-area .details-email {
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.enter-details-page .details-form .payment-area {
+  margin-bottom: 2rem;
+}
+.enter-details-page .details-form .payment-area label {
+  font-size: 1.6rem;
+  color: #a6ce39;
+}
+.enter-details-page .details-form .payment-area .details-payment-card {
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.enter-details-page .details-form .payment-area .details-payment-cvc {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.enter-details-page .details-form .payment-area .details-payment-zip {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.enter-details-page .details-form .btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.enter-details-page .details-form .btn-area .go-back {
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #a6ce39;
+  color: white;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  align-self: center;
+  margin-right: 2rem;
+}
+.enter-details-page .details-form .btn-area .checkout-btn {
+  padding: 2rem 2rem;
+  font-size: 1.6rem;
+  align-self: center;
+  border: none;
+  border-radius: 0.5rem;
+  background: #f89b1c;
+  color: white;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+.enter-details-page .details-form .checkout-btn:hover {
+  background: #e28e18;
+  transition: 0.3s ease-in-out;
+}
+.enter-details-page .details-form .go-back:hover {
+  background: #92b432;
+  transition: 0.3s ease-in-out;
+}
+
 .top-bar {
   background: #f89b1c;
 }

@@ -1,5 +1,8 @@
 #menu {
   margin-top: 7rem !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.3s;
+
   .menu__banner {
     background-image: url(/img/2.jpg);
     background-position: center;

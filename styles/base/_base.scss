@@ -17,11 +17,11 @@ body {
   background: #fafafa;
   height: 100%;
   width: 100% !important;
+  position: relative;
 }
 
-body,
-.smooth-container {
-  scroll-behavior: smooth;
+p {
+  margin-bottom: 0 !important;
 }
 
 html,
@@ -44,4 +44,9 @@ li {
 input,
 textarea {
   background-color: white;
+}
+
+body,
+.smooth-container {
+  scroll-behavior: smooth;
 }
