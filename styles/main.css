@@ -882,8 +882,8 @@ input.valid + .form-message {
 .checkout-price .amount-alert {
   color: red;
   font-size: 1.6rem;
-  margin-bottom: 2rem;
-  display: none;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem;
 }
 .checkout-price .checkout-title {
   font-size: 2.5rem;
@@ -1022,6 +1022,23 @@ input.valid + .form-message {
   transition: 0.3s ease-in-out;
 }
 
+.orders {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3rem;
+}
+.orders li {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-device-width: 584px) {
+  .orders {
+    grid-template-columns: 1fr;
+  }
+}
 .top-bar {
   background: #f89b1c;
 }
