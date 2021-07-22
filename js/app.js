@@ -1,6 +1,5 @@
-
 // Scroll Menu - show active section
-const scrollingLinkAnimation = function () {
+function scrollingLinkAnimation() {
   const sections = document.querySelectorAll(".page-section");
   const sectionChildren = document.querySelectorAll(".page-section-container");
   const links = document.querySelectorAll(".main-link");
@@ -30,12 +29,12 @@ const scrollingLinkAnimation = function () {
   sections.forEach((section) => {
     observer.observe(section);
   });
-};
+}
 
 scrollingLinkAnimation();
 
 // Display and hide hovered menu categories:
-const showHoveredMenuCategories = function (e) {
+function showHoveredMenuCategories(e) {
   // variables:
   const categorySections = document.querySelectorAll(".category-contain");
   categorySections.forEach((category) => {
@@ -49,12 +48,12 @@ const showHoveredMenuCategories = function (e) {
       category.children[1].classList.remove("hovered-show");
     });
   });
-};
+}
 
 showHoveredMenuCategories();
 
 // sort through general categories
-const sortThroughCategories = function (selected) {
+function sortThroughCategories(selected) {
   const items = document.querySelectorAll(".item");
   const categoryTitles = document.querySelectorAll(".food-title");
   const menuColumns = document.querySelectorAll(".menu-col");
@@ -105,10 +104,10 @@ const sortThroughCategories = function (selected) {
       menuColumns[i].classList.remove("d-none");
     }
   }
-};
+}
 
 // sort through hovered menu categories:
-const sortThroughHoveredCategories = function (selected) {
+function sortThroughHoveredCategories(selected) {
   // variables
   const subCategories = document.querySelectorAll(".hovered-item");
   const menuItems = document.querySelectorAll(".item");
@@ -161,11 +160,11 @@ const sortThroughHoveredCategories = function (selected) {
       menuColumns[i].classList.remove("d-none");
     }
   }
-};
+}
 
 // Menu sorting via both category and sub category buttons:
 
-const sortThroughMenu = function (e) {
+function sortThroughMenu(e) {
   // variables:
   const categories = document.querySelectorAll(".category");
   const subCategories = document.querySelectorAll(".hovered-item");
@@ -239,6 +238,6 @@ const sortThroughMenu = function (e) {
       });
     });
   });
-};
+}
 
 sortThroughMenu();
