@@ -4,7 +4,7 @@ let cartPrices = [];
 let cartImgs = [];
 
 // User cart storage
-const userCart = {
+let userCart = {
   img: "",
   name: "",
   price: "",
@@ -153,7 +153,6 @@ function showCartPaymentPage() {
       noItemsInCartAlert.classList.remove("d-none");
     } else {
       noItemsInCartAlert.classList.add("d-none");
-      cartTitle.classList.add("summary-page-slideout");
       cartSummaryPage.classList.add("summary-page-slideout");
       paymentPage.classList.add("payment-page-show");
     }

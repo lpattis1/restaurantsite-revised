@@ -112,6 +112,12 @@ function completeOrder() {
         orderCompletePage.classList.add("order-complete-page-show");
         modal.classList.add("complete-bg");
         cartCount.textContent = 0;
+
+        if (orderCompletePage.classList.contains("order-complete-page-show")) {
+          cartClose.addEventListener("click", function (e) {
+            location.reload();
+          });
+        }
       }
     }
   });
