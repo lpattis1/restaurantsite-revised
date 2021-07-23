@@ -16,6 +16,8 @@ const cartModal = document.querySelector(".cart-modal-bg");
 const modal = document.querySelector(".cart-modal");
 const cartClose = document.querySelector(".cart-modal-close");
 const cartCount = document.querySelector(".count");
+const cartTitle = document.querySelector(".cart-sum ");
+const cartSummaryPage = document.querySelector(".summary");
 const checkoutBtn = document.querySelector(".to-details-btn");
 const noItemsInCartAlert = document.querySelector(".amount-alert");
 let currentCartItems = parseInt(cartCount.textContent);
@@ -29,6 +31,7 @@ const totalOrder = document.querySelector(".total-number");
 let totalOrderPrice = parseFloat(totalOrder.textContent);
 
 // Payment page variables
+const paymentPage = document.querySelector(".enter-details-page");
 
 // Open cart modal
 function openCartModal() {
@@ -150,6 +153,9 @@ function showCartPaymentPage() {
       noItemsInCartAlert.classList.remove("d-none");
     } else {
       noItemsInCartAlert.classList.add("d-none");
+      cartTitle.classList.add("summary-page-slideout");
+      cartSummaryPage.classList.add("summary-page-slideout");
+      paymentPage.classList.add("payment-page-show");
     }
 
     cartClose.addEventListener("click", function (e) {

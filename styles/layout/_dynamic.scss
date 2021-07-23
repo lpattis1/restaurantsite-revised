@@ -55,3 +55,25 @@ input.valid + .form-message {
 .thank-you-show {
   display: block !important;
 }
+
+.summary-page-slideout {
+  transform: translateX(-500%);
+  transition: 0.3s ease-in-out;
+}
+
+.payment-page-show {
+  transform: translateX(0%) !important;
+}
+
+.payment-page-slideout {
+  transform: translateX(-500%) !important;
+  transition: 0.3s ease-in-out;
+}
+
+.order-complete-page-show {
+  transform: translateX(0%) !important;
+}
+
+.complete-bg {
+  background: #f89b1c !important;
+}

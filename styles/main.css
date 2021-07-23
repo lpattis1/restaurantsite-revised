@@ -333,6 +333,28 @@ input.valid + .form-message {
   display: block !important;
 }
 
+.summary-page-slideout {
+  transform: translateX(-500%);
+  transition: 0.3s ease-in-out;
+}
+
+.payment-page-show {
+  transform: translateX(0%) !important;
+}
+
+.payment-page-slideout {
+  transform: translateX(-500%) !important;
+  transition: 0.3s ease-in-out;
+}
+
+.order-complete-page-show {
+  transform: translateX(0%) !important;
+}
+
+.complete-bg {
+  background: #f89b1c !important;
+}
+
 #footer {
   background: #a6ce39;
   padding: 1.5rem;
@@ -774,6 +796,9 @@ input.valid + .form-message {
   overflow-y: auto !important;
   overflow-x: hidden !important;
 }
+.cart-modal-bg .cart-modal .checkout-page {
+  position: relative;
+}
 .cart-modal-bg .cart-modal .cart-sum {
   background: #a6ce39;
   padding: 2rem;
@@ -913,18 +938,24 @@ input.valid + .form-message {
   font-size: 1.3rem;
   color: red;
   display: none;
+  margin-bottom: 2rem !important;
 }
 
 .enter-details-page {
   margin-top: 3rem;
   transition: 0.3s ease-in-out;
-  transform: translateX(200%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(500%);
 }
 .enter-details-page .form-message {
   margin-bottom: 1rem;
   font-size: 1.4rem;
   color: red;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .enter-details-page .details-title {
   font-size: 2.5rem;
@@ -1034,11 +1065,33 @@ input.valid + .form-message {
   margin-top: 1.5rem;
 }
 
+.order-complete-page {
+  transform: translateX(800%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+}
+.order-complete-page .complete-title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.order-complete-page .complete-message {
+  font-size: 1.6rem;
+  width: 90%;
+  text-align: center;
+}
+
 @media only screen and (max-device-width: 584px) {
   .orders {
     grid-template-columns: 1fr;
   }
 }
+.details-payment-zip {
+  margin-bottom: 1rem;
+}
+
 .top-bar {
   background: #f89b1c;
 }

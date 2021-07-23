@@ -21,6 +21,10 @@
     height: 80%;
     overflow-y: auto !important;
     overflow-x: hidden !important;
+
+    .checkout-page {
+      position: relative;
+    }
     .cart-sum {
       background: #a6ce39;
       padding: 2rem;
@@ -180,19 +184,26 @@
     font-size: 1.3rem;
     color: red;
     display: none;
+    margin-bottom: 2rem !important;
   }
 }
 
 .enter-details-page {
   margin-top: 3rem;
   transition: 0.3s ease-in-out;
-  transform: translateX(200%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(500%);
 
   .form-message {
     margin-bottom: 1rem;
     font-size: 1.4rem;
     color: red;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .details-title {
@@ -329,8 +340,31 @@
   }
 }
 
+.order-complete-page {
+  transform: translateX(800%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+
+  .complete-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .complete-message {
+    font-size: 1.6rem;
+    width: 90%;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-device-width: 584px) {
   .orders {
     grid-template-columns: 1fr;
   }
+}
+
+.details-payment-zip {
+  margin-bottom: 1rem;
 }
