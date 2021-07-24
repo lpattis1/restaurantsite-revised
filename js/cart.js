@@ -32,6 +32,7 @@ let totalOrderPrice = parseFloat(totalOrder.textContent);
 
 // Payment page variables
 const paymentPage = document.querySelector(".enter-details-page");
+const goBackBtn = document.querySelector(".go-back");
 
 // Open cart modal
 function openCartModal() {
@@ -163,7 +164,16 @@ function showCartPaymentPage() {
   });
 }
 
+// Go back to previous summary page
+function goBackToSummaryPage() {
+  goBackBtn.addEventListener("click", function (e) {
+    paymentPage.classList.remove("payment-page-show");
+    cartSummaryPage.classList.remove("summary-page-slideout");
+  });
+}
+
 openCartModal();
 closeCartModal();
 checkout();
 showCartPaymentPage();
+goBackToSummaryPage();

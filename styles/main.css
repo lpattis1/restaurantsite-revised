@@ -457,7 +457,7 @@ input.valid + .form-message {
     color: #3e3d3d;
     font-size: 1.3rem !important;
     width: 100% !important;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem !important;
     text-align: center;
   }
 
