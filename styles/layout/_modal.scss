@@ -234,8 +234,6 @@
     }
 
     .email-area {
-      display: flex;
-      flex-direction: column;
       margin-bottom: 2rem;
 
       label {
@@ -359,9 +357,21 @@
   }
 }
 
+@media only screen and (max-device-width: 390px) {
+  .details-form {
+    input {
+      width: 100% !important;
+    }
+  }
+}
+
 @media only screen and (max-device-width: 584px) {
   .orders {
     grid-template-columns: 1fr;
+  }
+
+  .cart-title {
+    font-size: 1.9rem !important;
   }
 }
 
